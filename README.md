@@ -1,6 +1,6 @@
 # Telegram Form Submission
 
-https://i.ibb.co/W5xqyGS/image.png
+![image](https://github.com/user-attachments/assets/c1abd435-f0d1-409a-b130-8000ed2bf4f7)
 
 This PHP script receives form data and sends it to a Telegram bot.
 
